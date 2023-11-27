@@ -43,6 +43,7 @@ def merge_order_updates(session):
 
 def main(session: Session) -> str:
     # Create the ORDERS table and ORDERS_STREAM stream if they don't exist
+    print('Yehhhhh')
     if not table_exists(session, schema='HARMONIZED', name='ORDERS'):
         create_orders_table(session)
         create_orders_stream(session)
